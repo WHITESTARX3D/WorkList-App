@@ -54,13 +54,17 @@ if (!(todo === "")) {
   
   return (
     <>
-      <h1 className="bg-red-600 my-10 mx-auto w-50 text-center text-4xl text-white rounded-full">Add a To-do</h1>
-      <div className="relative flex flex-row h-20 w-80 mx-auto justify-center">
+      <h1 className="bg-red-600 my-10 mx-auto w-65 p-5 text-center text-4xl text-white rounded-full">Add a To-do</h1>
+      <div className="relative flex flex-row h-10 w-80 mx-auto justify-center">
       <input onChange={change} value={todo} className="w-55 h-10 border-3 border-red-600" type="text" placeholder="add new"/> <button onClick={addtask} className="bg-red-600 h-10 w-15">Add</button>
-      <div className="flex items-center border-2 border-red-600 h-10">show finished <input type="checkbox" checked={fn} onChange={tf}/></div>
       </div>
+        <div className="flex justify-between items-center h-10 mx-auto w-35">
+           show finished
+           <input type="checkbox" checked={fn} onChange={tf}/>
+           </div>
+         
       <div className="mx-auto w-90  flex flex-col items-center p-2 gap-4">
-      {tasks.length === 0 && <p>no tasks left :)</p>}
+      {tasks.length === 0 && <p>no tasks left (⁠ ⁠╹⁠▽⁠╹⁠ ⁠)</p>}
       {tasks.map(i => {
           return (fn || !i.isdone) && (
      <div key={i.id} className="border-2 border-red h-20 w-80 flex justify-between items-center p-2 rounded-md">
