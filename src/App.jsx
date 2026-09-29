@@ -71,7 +71,7 @@ if (!(todo === "")) {
      <input onChange={check} name={i.id} type="checkbox" checked={i.isdone} value={i.isdone}/>
             <p className={i.isdone?"line-through":""}>{i.todo}</p> 
       <div className="flex flex-col gap-3">
-      <button onClick={()=>{edittask(i.id)}} className="bg-green-700 h-6 w-6 rounded-sm text-white">edit</button>
+      <button onClick={()=>{edittask(i.id)}} className="bg-green-700 h-6 w-6 rounded-sm text-white font-[200]">↑</button>
       <button onClick={()=>{deletetask(i.id)}} className="bg-red-700 h-6 w-6 rounded-sm text-white font-[1000]">x</button>
       </div>
             
